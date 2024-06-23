@@ -1,0 +1,54 @@
+name: databuilder
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-workflow-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.11.4"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Python script
+        run: python src/workflow.py
+
+      - name: Archive generated files as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: generated-files
+          path: ./api
+
+      - name: Checkout production branch
+        uses: actions/checkout@v2
+        with:
+          ref: production
+
+      - name: Download generated files artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: generated-files
+          path: ./api
+
+      - name: Apply changes to production branch
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Add generated files from main branch"
+          git push origin production
