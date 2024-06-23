@@ -1,4 +1,8 @@
 def parse_latitude(latitude_str):
+    # latitude_str is in decimal format
+    if len(latitude_str.split(".")) == 2:
+        return float(latitude_str)
+
     direction = latitude_str[0]
 
     degrees_str, minutes_str, seconds_str, dec_seconds_str = latitude_str[1:].split(".")
@@ -16,6 +20,10 @@ def parse_latitude(latitude_str):
 
 
 def parse_longitude(longitude_str):
+    # longitude_str is in decimal format
+    if len(longitude_str.split(".")) == 2:
+        return float(longitude_str)
+
     direction = longitude_str[0]
 
     degrees_str, minutes_str, seconds_str, dec_seconds_str = longitude_str[1:].split(
