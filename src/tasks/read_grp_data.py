@@ -14,12 +14,16 @@ class GrpDataReader:
                 if file.endswith(".txt"):
                     file_path = os.path.join(root, file)
                     self.process_file(file_path)
+
+        print("ICAO: Stand count")
         count = 0
         for airport, stands in self.airports.items():
             count += len(stands)
-            print(airport, len(stands))
+            print(f"{airport}: {len(stands)}")
 
-        print(count)
+        print("Total stand count: ", count)
+
+        return self.airports
 
     def process_file(self, file_path):
         with open(file_path, "r") as file:
