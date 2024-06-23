@@ -14,14 +14,18 @@ class GrpDataReader:
                 if file.endswith(".txt"):
                     file_path = os.path.join(root, file)
                     self.process_file(file_path)
-
+        count = 0
         for airport, stands in self.airports.items():
+            count += len(stands)
             print(airport, len(stands))
+
+        print(count)
 
     def process_file(self, file_path):
         with open(file_path, "r") as file:
             content = file.read()
             blocks = content.split("\n\n")
+            # FIXME: works only when stands are properly separated by newlines, most of them are but about 1,7% (34) are not
 
             for block in blocks:
                 stand: Stand = self.process_block(block)
