@@ -1,7 +1,11 @@
 import os
 import csv
 from statistics import mean
-from views.stand import Stand
+
+
+def parse_stand_name(stand_name: str):
+    """The library the homepage uses does not accept spaces in the name"""
+    return stand_name.replace(" ", "-")
 
 
 def export_hp_csv(airports: dict, output_path: str):
@@ -18,4 +22,4 @@ def export_hp_csv(airports: dict, output_path: str):
             for stand in stands:
                 lat = mean(stand.lat) if isinstance(stand.lat, list) else stand.lat
                 lon = mean(stand.lon) if isinstance(stand.lon, list) else stand.lon
-                writer.writerow([stand.stand, lat, lon])
+                writer.writerow([parse_stand_name(stand.stand), lat, lon])
