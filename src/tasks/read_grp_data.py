@@ -25,66 +25,59 @@ class GrpDataReader:
 
         return self.airports
 
+    def add_stand(self, stand: Stand):
+        if stand.icao in self.airports:
+            self.airports[stand.icao].append(stand)
+        else:
+            self.airports[stand.icao] = [stand]
+
     def process_file(self, file_path):
         with open(file_path, "r") as file:
             content = file.read()
-            blocks = content.split("\n\n")
-            # FIXME: works only when stands are properly separated by newlines, most of them are but about 1,7% (34) are not
+            lines = content.split("\n")
 
-            for block in blocks:
-                stand: Stand = self.process_block(block)
-                if stand:
-                    if stand.icao in self.airports:
-                        self.airports[stand.icao].append(stand)
-                    else:
-                        self.airports[stand.icao] = [stand]
+            for index, line in enumerate(lines):
+                line = line.strip()
 
-    def process_block(self, block) -> Stand:
-        lines = block.strip().split("\n")
+                # skip comments and empty lines
+                if line.startswith("//") or line == "":
+                    continue
 
-        icao = None
-        stand = None
-        lat = []
-        lon = []
+                if line.startswith("STAND:"):
+                    parts = line.split(":")
 
-        for line in lines:
-            line = line.strip()
+                    if len(parts) == 3:
+                        _, icao, stand_name = parts
+                        latitudes = []
+                        longitudes = []
+                        j = 1
+                        while j + index < len(lines) and not lines[
+                            index + j
+                        ].startswith("STAND:"):
+                            if lines[index + j].startswith("COORD:"):
+                                _, lat_str, lon_str = lines[index + j].split(":")
+                                latitudes.append(parse_latitude(lat_str))
+                                longitudes.append(parse_longitude(lon_str))
+                                j += 1
 
-            # skip comments
-            if line.startswith("//"):
-                continue
+                            j += 1
 
-            if line.startswith("STAND:"):
-                data = self.process_stand_line(line)
-                if isinstance(data, Stand):
-                    return data
-                if isinstance(data, tuple):
-                    icao = data[0]
-                    stand = data[1]
+                        self.add_stand(
+                            Stand(
+                                icao=icao,
+                                stand=stand_name,
+                                lat=latitudes,
+                                lon=longitudes,
+                            )
+                        )
 
-            if line.startswith("COORD:"):
-                latitude, longitude = self.process_coord_line(line)
-                lat.append(latitude)
-                lon.append(longitude)
-
-        if icao and stand and len(lat) > 0 and len(lon) > 0:
-            return Stand(icao=icao, stand=stand, lat=lat, lon=lon)
-
-    def process_stand_line(self, line):
-        parts = line.split(":")
-        if len(parts) == 6:
-            _, icao, stand, lat, lon, _ = parts[:6]
-            return Stand(
-                icao=icao,
-                stand=stand,
-                lat=parse_latitude(lat),
-                lon=parse_longitude(lon),
-            )
-
-        if len(parts) == 3:
-            _, icao, stand = parts[:3]
-            return icao, stand
-
-    def process_coord_line(self, line):
-        _, lat, lon = line.split(":")
-        return parse_latitude(lat), parse_longitude(lon)
+                    elif len(parts) == 6:
+                        _, icao, stand_name, lat_str, lon_str, _ = parts
+                        self.add_stand(
+                            Stand(
+                                icao=icao,
+                                stand=stand_name,
+                                lat=parse_latitude(lat_str),
+                                lon=parse_longitude(lon_str),
+                            )
+                        )
