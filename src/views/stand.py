@@ -4,6 +4,6 @@ from pydantic import BaseModel
 
 class Stand(BaseModel):
     icao: str
-    stand: str
+    name: str
     lat: Union[float, List[float]]
     lon: Union[float, List[float]]

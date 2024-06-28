@@ -22,4 +22,4 @@ def export_hp_csv(airports: dict, output_path: str):
             for stand in stands:
                 lat = mean(stand.lat) if isinstance(stand.lat, list) else stand.lat
                 lon = mean(stand.lon) if isinstance(stand.lon, list) else stand.lon
-                writer.writerow([parse_stand_name(stand.stand), lat, lon])
+                writer.writerow([parse_stand_name(stand.name), lat, lon])

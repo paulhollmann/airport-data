@@ -28,7 +28,7 @@ class GrpDataReader:
     def add_stand(self, stand: Stand):
         if stand.icao in self.airports:
             if not any(
-                existing_stand.stand == stand.stand
+                existing_stand.name == stand.name
                 for existing_stand in self.airports[stand.icao]
             ):
                 self.airports[stand.icao].append(stand)
@@ -69,7 +69,7 @@ class GrpDataReader:
                         self.add_stand(
                             Stand(
                                 icao=icao,
-                                stand=stand_name,
+                                name=stand_name,
                                 lat=latitudes,
                                 lon=longitudes,
                             )
@@ -80,7 +80,7 @@ class GrpDataReader:
                         self.add_stand(
                             Stand(
                                 icao=icao,
-                                stand=stand_name,
+                                name=stand_name,
                                 lat=parse_latitude(lat_str),
                                 lon=parse_longitude(lon_str),
                             )
