@@ -9,7 +9,7 @@ Manages the airport data used on the VATSIM Germany homepage.
 icao = "EDDY"
 
 [[airport.links]]
-category = "Scenery" | "Charts" | "Briefing"
+category = "Scenery" | "Charts" | "Briefing" | NONE
 name = "Display Name 1"
 url = "https://example.url"
 ```

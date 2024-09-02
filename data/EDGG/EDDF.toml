@@ -2,21 +2,26 @@
 icao = "EDDF"
 
 [[airport.links]]
-name = "Charts"
+category = "Charts"
+name = "Charts (IFR)"
 url = "https://chartfox.org/EDDF"
 
 [[airport.links]]
+category = "Briefing"
 name = "Pilotbriefing"
 url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/eddf-frankfurtmain"
 
 [[airport.links]]
+category = "Briefing"
 name = "vACDM Pilot Guide"
 url = "https://knowledgebase.vatsim-germany.org/books/vacdm/page/vacdm-pilot-guide"
 
 [[airport.links]]
+category = "Scenery"
 name = "MSFS Scenery by virtualFRA"
 url = "https://virtual-fra.com/"
 
 [[airport.links]]
+category = "Scenery"
 name = "MSFS Scenery by Aviotek"
 url = "https://orbxdirect.com/product/aviotek-eddf-msfs"
