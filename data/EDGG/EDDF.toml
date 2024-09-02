@@ -1,0 +1,26 @@
+[[airport]]
+icao = "EDDF"
+
+[[airport.links]]
+name = "Charts"
+url = "https://chartfox.org/EDDF"
+
+[[airport.links]]
+name = "METAR"
+url = "https://metar.vatsim.net/EDDF"
+
+[[airport.links]]
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/eddf-frankfurtmain"
+
+[[airport.links]]
+name = "vACDM Pilot Guide"
+url = "https://knowledgebase.vatsim-germany.org/books/vacdm/page/vacdm-pilot-guide"
+
+[[airport.links]]
+name = "MSFS Scenery by virtualFRA"
+url = "https://virtual-fra.com/"
+
+[[airport.links]]
+name = "MSFS Scenery by Aviotek"
+url = "https://orbxdirect.com/product/aviotek-eddf-msfs"

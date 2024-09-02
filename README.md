@@ -2,11 +2,16 @@
 
 Manages the airport data used on the VATSIM Germany homepage.
 
-> [!WARNING]
-> Work in progress
-
 ```
-[airport]
-picture = "www.link.de"
-sop_link = "kb.vatger.de/sop"
+[[airport]]
+icao = "EDDY"
+
+[[airport.links]]
+name = "Display Name 1"
+url = "https://example.url"
+
+[[airport.links]]
+name = "Display Name 2"
+url = "https://example2.url"
+
 ```
