@@ -1,0 +1,17 @@
+[[airport]]
+icao = "EDDP"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDDP"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://1drv.ms/w/c/b6d5387947d75fd6/EYrY47Afd7RFl_nvjYjvY6QBbTP06NMpTH_-56vlVmI8cg?e=GC0Td0"
+
+[[airport.links]]
+category = "Briefing"
+name = "vACDM Pilot Guide"
+url = "https://knowledgebase.vatsim-germany.org/books/vacdm/page/vacdm-pilot-guide"

@@ -1,0 +1,12 @@
+[[airport]]
+icao = "EDDR"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDDR"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/eddr-saarbrucken"

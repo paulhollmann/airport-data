@@ -1,0 +1,17 @@
+[[airport]]
+icao = "EDNY"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDNY"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://1drv.ms/b/c/b6d5387947d75fd6/Ebh_JCp74L9FiHPnJtTRTIkB5UZFb6qBNg33vfHzSxUowQ?e=NvbaUO"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by BaggySimi"
+url = "https://flightsim.to/file/36234/friedrichshafen-airport-edny-enhanced"

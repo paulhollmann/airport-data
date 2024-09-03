@@ -1,0 +1,27 @@
+[[airport]]
+icao = "EDLN"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDLN"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/edln-monchengladbach"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by CountCrash"
+url = "https://forums.x-plane.org/index.php?/files/file/86343-edln-m%C3%B6nchengladbach-for-xp-12/"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by uli057"
+url = "https://flightsim.to/file/21557/edln-mnchengladbach"
+
+[[airport.links]]
+category = "Scenery"
+name = "X-Plane Scenery by crosswindsim"
+url = "https://forums.x-plane.org/index.php?/files/file/86343-edln-m%C3%B6nchengladbach-for-xp-12/"

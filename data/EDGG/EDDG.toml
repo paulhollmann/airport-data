@@ -1,0 +1,22 @@
+[[airport]]
+icao = "EDDG"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDDG"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/eddg-munsterosnabruck"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by LeoBloom"
+url = "https://flightsim.to/file/13613/munster-osnabruck-international-airport"
+
+[[airport.links]]
+category = "Scenery"
+name = "X-Plane Scenery by AeroX"
+url = "https://forums.x-plane.org/index.php?/files/file/69405-eddg-fmo-m%C3%BCnster-osnabr%C3%BCck/"

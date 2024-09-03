@@ -1,0 +1,17 @@
+[[airport]]
+icao = "EDMA"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDMA"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://1drv.ms/w/c/b6d5387947d75fd6/EZ36vS_vlWNLtv1j8f7u6eQBd2Ud6UXBpenr3I48FbpJZw?e=hpXIE1"
+
+[[airport.links]]
+category = "Scenery"
+name = "X-Plane Scenery by BaggySimi"
+url = "https://forums.x-plane.org/index.php?/files/file/24438-edma-augsburg-airport/"

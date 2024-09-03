@@ -1,0 +1,22 @@
+[[airport]]
+icao = "EDFH"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDFH"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/edfh-frankfurt-hahn"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by pandamisha"
+url = "https://flightsim.to/file/46436/frankfurt-hahn-airport-edfh"
+
+[[airport.links]]
+category = "Scenery"
+name = "X-Plane Scenery by chrisru"
+url = "https://forums.x-plane.org/index.php?/files/file/38260-frankfurt-hahn-airport/"

@@ -1,0 +1,22 @@
+[[airport]]
+icao = "EDDK"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDDK"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/eddk-kolnbonn"
+
+[[airport.links]]
+category = "Briefing"
+name = "vACDM Pilot Guide"
+url = "https://knowledgebase.vatsim-germany.org/books/vacdm/page/vacdm-pilot-guide"
+
+[[airport.links]]
+category = "Scenery"
+name = "X-Plane Scenery by FLYAGI"
+url = "https://flight-sim.org/filebase/index.php?entry/1410-eddk-cologne-bonn-xp12/"

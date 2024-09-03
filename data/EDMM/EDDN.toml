@@ -1,0 +1,17 @@
+[[airport]]
+icao = "EDDN"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDDN"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://1drv.ms/w/c/b6d5387947d75fd6/EV0wOZxFCFpMpnmPzfPpFfcBsdJI8oHmAFhChWtqh6Jzcg?e=poD7c0"
+
+[[airport.links]]
+category = "Scenery"
+name = "X-Plane Scenery by FranknFly"
+url = "https://forums.x-plane.org/index.php?/files/file/42808-eddn-nuernberg-international-for-xplane-12/"

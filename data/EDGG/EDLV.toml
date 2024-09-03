@@ -1,0 +1,17 @@
+[[airport]]
+icao = "EDLV"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDLV"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/edlv-niederrhein"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by here2fly"
+url = "https://flightsim.to/file/20717/niederrhein-weeze"

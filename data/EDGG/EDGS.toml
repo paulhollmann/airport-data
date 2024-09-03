@@ -1,0 +1,12 @@
+[[airport]]
+icao = "EDGS"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDGS"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by uli057"
+url = "https://flightsim.to/file/22730/edgs-airport-siegerland-burbach"

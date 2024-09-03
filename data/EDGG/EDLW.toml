@@ -1,0 +1,22 @@
+[[airport]]
+icao = "EDLW"
+
+[[airport.links]]
+category = "Charts"
+name = "Charts (IFR)"
+url = "https://chartfox.org/EDLW"
+
+[[airport.links]]
+category = "Briefing"
+name = "Pilotbriefing"
+url = "https://knowledgebase.vatsim-germany.org/books/airports-langen-fir-edgg/chapter/edlw-dortmund"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by Chak991"
+url = "https://de.flightsim.to/file/47104/edlw-dortmund-regional"
+
+[[airport.links]]
+category = "Scenery"
+name = "MSFS Scenery by Bahrometrix"
+url = "https://flightsim.to/file/51183/regional-airport-dortmund-edlw"
