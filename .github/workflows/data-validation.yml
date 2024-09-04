@@ -1,4 +1,4 @@
-name: databuilder
+name: datavalidator
 
 on:
   workflow_dispatch:
@@ -26,4 +26,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Python script
+        env:
+          WORKFLOW_RUN_NUMBER: ${{ github.run_number }}
         run: python src/validate_data.py

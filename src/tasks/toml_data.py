@@ -74,11 +74,9 @@ class TomlData:
         for error in self.errors:
             print(error)
 
-        sys.exit(1)
-
     def export_data_json(self):
         if len(self.errors) != 0:
-            return
+            sys.exit(1)
 
         try:
             json_data = self.data.model_dump(mode="json")
