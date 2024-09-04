@@ -1,0 +1,2 @@
+ROOT_DIRECTORY = "data/"
+OUTPUT_DIRECTORY = "api/"

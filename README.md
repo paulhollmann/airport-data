@@ -34,6 +34,4 @@ url = "https://example2.url"
 
 # TODO:
 
-- validate data links to not return 404
 - give warnings using PRs or Discord hook?
--

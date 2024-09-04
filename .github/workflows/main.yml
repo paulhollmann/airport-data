@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Python script
-        run: python src/workflow.py
+        run: python src/combine_data.py
 
       - name: Archive generated files as artifact
         uses: actions/upload-artifact@v2
